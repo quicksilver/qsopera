@@ -20,8 +20,6 @@
     along with QSOpera.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#import <QSCore/QSObjectSource.h>
-
 
 @interface QSOperaSource : QSObjectSource
 {

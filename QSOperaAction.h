@@ -20,8 +20,6 @@
     along with QSOpera.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#import <QSCore/QSObject.h>
-#import <QSCore/QSActionProvider.h>
 #import "QSOperaAction.h"
 
 #define kQSOperaAction @"QSOperaAction"

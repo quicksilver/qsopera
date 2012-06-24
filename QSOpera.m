@@ -23,8 +23,6 @@
 #import "QSOpera.h"
 #import "QSOperaSource.h"
 #import "OperaBookmark.h"
-#import <QSCore/QSObject.h>
-#import <QSCore/QSObject_URLHandling.h>
 
 @implementation QSOpera
 
@@ -40,11 +38,8 @@
 
 + (void) mapObjectsFrom:(NSArray *)opera into:(NSMutableArray *)quicksilver
 {
-	int iCount = [opera count];
-	int i;
-	for (i = 0; i < iCount; i++)
+	for (OperaBookmark *oItem in opera)
 	{
-		OperaBookmark *oItem = (OperaBookmark *)[opera objectAtIndex:i];
 		QSObject *oNewObject = [QSOpera QSObjectForURL:[oItem URL] andTitle:[oItem keywordPrefixedTitle] andIcon:[oItem icon] andDescription:[oItem description]];
 		if (oNewObject != nil)
 			[quicksilver addObject:oNewObject];

@@ -68,7 +68,7 @@ BOOL getTwoStringsFromAE(NSAppleEventDescriptor *returnDescriptor, NSString **st
         if (kAENullEvent != [returnDescriptor descriptorType])
             if (typeAEList == [returnDescriptor descriptorType])
             {
-				int iCount = 0;
+				NSUInteger iCount = 0;
 				while ([returnDescriptor descriptorAtIndex:(iCount + 1)] != nil)
 					iCount++;
 				if (iCount == 2)
@@ -127,7 +127,7 @@ BOOL getTwoStringsFromAE(NSAppleEventDescriptor *returnDescriptor, NSString **st
             if (typeAEList == [returnDescriptor descriptorType])
             {
 				NSMutableArray *oResult = [NSMutableArray arrayWithObjects:nil];
-				int i = 1;
+				NSInteger i = 1;
 				while ([returnDescriptor descriptorAtIndex:i] != nil)
 				{
 					NSString *sTitle = nil;
@@ -152,11 +152,8 @@ OperaBookmark *parseBookmark(NSArray *lines) {
 	OperaBookmark *oItem = [[[OperaBookmark alloc] init] autorelease];
 	BOOL bHasName = NO;
 	BOOL bHasURL = NO;
-	int iCount = [lines count];
-	int i;
-	for (i = 0; i < iCount; i++)
+    for (NSString *sLine in lines)
 	{
-		NSString *sLine = (NSString *)[lines objectAtIndex:i];
 		sLine = [sLine stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 		if ([sLine hasPrefix:@"NAME="])
 		{
@@ -182,11 +179,8 @@ OperaBookmark *parseSearch(NSArray *lines) {
 	BOOL bHasName = NO;
     BOOL bUsePost = NO;
     NSString *sURL = nil;
-	int iCount = [lines count];
-	int i;
-	for (i = 0; i < iCount; i++)
+	for (NSString *sLine in lines)
 	{
-		NSString *sLine = (NSString *)[lines objectAtIndex:i];
 		sLine = [sLine stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 		if ([sLine hasPrefix:@"Name="])
 		{
@@ -222,7 +216,7 @@ OperaBookmark *parseSearch(NSArray *lines) {
 		return nil;
   }
 	NSArray *sLines = [sBookmarks componentsSeparatedByString:@"\n"];
-	int iCount = sLines.count;
+	NSUInteger iCount = sLines.count;
 	
 	if (iCount < 3) return nil;
 	if (![(NSString *)[sLines objectAtIndex:0] isEqualToString:@"Opera Hotlist version 2.0"])
@@ -236,7 +230,7 @@ OperaBookmark *parseSearch(NSArray *lines) {
 		return nil;
 	}
 	
-	int i = 1;
+	NSUInteger i = 1;
 	BOOL bCapturing = FALSE;
 	NSMutableArray *oBlock = [[[NSMutableArray alloc] init] autorelease];
 	NSMutableArray *oArray = [[[NSMutableArray alloc] init] autorelease];
@@ -281,7 +275,7 @@ OperaBookmark *parseSearch(NSArray *lines) {
 		return nil;
   }
 	NSArray *sLines = [sBookmarks componentsSeparatedByString:@"\n"];
-	int iCount = sLines.count;
+	NSUInteger iCount = sLines.count;
 	
 	if (iCount < 1) {
     NSLog(@"[QSOpera] Error reading searches from '%@': %@", sFilename, @"Format unexpected (3).");
@@ -292,14 +286,11 @@ OperaBookmark *parseSearch(NSArray *lines) {
     NSLog(@"[QSOpera] Error reading searches from '%@': %@", sFilename, @"Format unexpected (4).");
 		return nil;
 	}
-	int i = 1;
 	BOOL bCapturing = FALSE;
 	NSMutableArray *oBlock = [[[NSMutableArray alloc] init] autorelease];
 	NSMutableArray *oArray = [[[NSMutableArray alloc] init] autorelease];
-	while (i < iCount - 1)
+    for(NSString *sLine in sLines)
 	{
-		i++;
-		NSString *sLine = (NSString *)[sLines objectAtIndex:i];
 		sLine = [sLine stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
 		if (sLine.length > 0 && ![sLine hasPrefix:@";"])
 		{

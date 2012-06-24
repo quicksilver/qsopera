@@ -4,6 +4,8 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
+	<key>CFBundleDisplayName</key>
+	<string>Opera Plugin</string>
 	<key>CFBundleExecutable</key>
 	<string>QSOpera</string>
 	<key>CFBundleIdentifier</key>
@@ -11,11 +13,13 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>Opera Module</string>
+	<string>Opera Plugin</string>
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0.0</string>
 	<key>CFBundleVersion</key>
-	<string>91</string>
+	<string>A0</string>
 	<key>QSActions</key>
 	<dict>
 		<key>QSOperaAction</key>
@@ -134,6 +138,13 @@
 		<key>QSBundleChildPresets</key>
 		<dict>
 			<key>com.operasoftware.Opera</key>
+			<string>QSOperaBundleSource</string>
+		</dict>
+		<key>QSObjectHandlers</key>
+		<dict>
+			<key>qs.opera.bookmarkGroup</key>
+			<string>QSOperaBundleSource</string>
+			<key>qs.opera.openPages</key>
 			<string>QSOperaBundleSource</string>
 		</dict>
 		<key>QSObjectSources</key>

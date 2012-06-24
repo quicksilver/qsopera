@@ -23,7 +23,6 @@
 #import "QSOperaBundleSource.h"
 #import "OperaBookmark.h"
 #import "QSOpera.h"
-#import <QSCore/QSObject.h>
 
 
 @implementation QSOperaBundleSource
@@ -48,14 +47,44 @@
 }
 
 - (BOOL)loadChildrenForObject:(QSObject *)object {
-	if (object == nil || ![[object identifier] isEqualToString:[[NSWorkspace sharedWorkspace] absolutePathForAppBundleWithIdentifier:@"com.operasoftware.Opera"]])
+	if (object == nil || ![[[NSBundle bundleWithPath:[object singleFilePath]] bundleIdentifier] isEqualToString:@"com.operasoftware.Opera"] )
 		return NO;
+    
+    // Open pages
+    QSObject *currentPages = [QSObject makeObjectWithIdentifier:@"QSOperaOpenPages"];
+    [currentPages setName:@"Open Web Pages (Opera)"];
+    [currentPages setDetails:@"URLs from all open windows and tabs"];
+    [currentPages setPrimaryType:@"qs.opera.openPages"];
+    [currentPages setIcon:[QSResourceManager imageNamed:@"com.operasoftware.Opera"]];
 	NSArray *children = [self getTabs];
-	if (children) {
-		[object setChildren:children];
-		return YES;
-	} else
-		return NO;
+    if (children) {
+        [currentPages setChildren:children];
+    }
+    
+    // Bookmarks
+    NSArray *oSearchItems = [OperaBookmark loadSearches];
+	NSArray *oBookmarkItems = [OperaBookmark loadBookmarks];
+	NSUInteger iCount = (oSearchItems != nil ? [oSearchItems count] : 0) + (oBookmarkItems != nil ? [oBookmarkItems count] : 0);
+    NSMutableArray *objects=[NSMutableArray arrayWithCapacity:iCount];
+	if (oBookmarkItems != nil)
+		[QSOpera mapObjectsFrom:oBookmarkItems into:objects];
+	if (oSearchItems != nil)
+		[QSOpera mapObjectsFrom:oSearchItems into:objects];
+    
+    QSObject *group = [QSObject objectWithName:@"Bookmarks"];
+	//NSLog(@"title %@", title);
+	[group setIdentifier:@"qs.opera.Bookmarks"];
+	[group setChildren:objects];
+	[group setPrimaryType:@"qs.opera.bookmarkGroup"];
+	[group setObject:@"" forMeta:kQSObjectDefaultAction];
+    [group setObject:objects forType:QSURLType];
+    [object setChildren:[NSArray arrayWithObjects:currentPages,group,nil]];
+    return YES;
 }
+
+- (void)setQuickIconForObject:(QSObject *)object {
+    [object setIcon:[QSResourceManager imageNamed:@"com.operasoftware.Opera"]];
+}
+
 
 @end

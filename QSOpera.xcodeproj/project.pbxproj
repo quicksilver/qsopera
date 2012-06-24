@@ -19,11 +19,13 @@
 		073129270DFB9C33006189C5 /* URL - Move from Opera to Firefox.scpt in Resources */ = {isa = PBXBuildFile; fileRef = 073129240DFB9C2A006189C5 /* URL - Move from Opera to Firefox.scpt */; };
 		073129280DFB9C33006189C5 /* URL - Move from Safari to Firefox.scpt in Resources */ = {isa = PBXBuildFile; fileRef = 073129250DFB9C2A006189C5 /* URL - Move from Safari to Firefox.scpt */; };
 		0753A3AC0DFAB0FF00CD64A7 /* OperaBookmark.m in Sources */ = {isa = PBXBuildFile; fileRef = 0753A3AB0DFAB0FF00CD64A7 /* OperaBookmark.m */; };
-		7F35FF4007F9ACD90056051D /* QSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F35FF3C07F9ACD90056051D /* QSCore.framework */; };
-		7F35FF4207F9ACD90056051D /* QSFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F35FF3E07F9ACD90056051D /* QSFoundation.framework */; };
 		8D1AC9700486D14A00FE50C9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD92D38A0106425D02CA0E72 /* Cocoa.framework */; };
 		BBF5817C0B1D9D84003CFF55 /* QSOperaAction.m in Sources */ = {isa = PBXBuildFile; fileRef = BBF5817B0B1D9D84003CFF55 /* QSOperaAction.m */; };
 		BBF581840B1D9DC3003CFF55 /* QSOperaSource.m in Sources */ = {isa = PBXBuildFile; fileRef = BBF581830B1D9DC3003CFF55 /* QSOperaSource.m */; };
+		CDF267E815907557007909C0 /* QSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDF267E415907557007909C0 /* QSCore.framework */; };
+		CDF267E915907557007909C0 /* QSEffects.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDF267E515907557007909C0 /* QSEffects.framework */; };
+		CDF267EA15907557007909C0 /* QSFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDF267E615907557007909C0 /* QSFoundation.framework */; };
+		CDF267EB15907557007909C0 /* QSInterface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDF267E715907557007909C0 /* QSInterface.framework */; };
 		E1EAB046068128A200774DFF /* QSOpera.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EAB045068128A200774DFF /* QSOpera.m */; };
 /* End PBXBuildFile section */
 
@@ -51,18 +53,18 @@
 		0753A3AA0DFAB0FF00CD64A7 /* OperaBookmark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OperaBookmark.h; sourceTree = "<group>"; };
 		0753A3AB0DFAB0FF00CD64A7 /* OperaBookmark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OperaBookmark.m; sourceTree = "<group>"; };
 		32DBCF980370C29C00C91783 /* QSOpera_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSOpera_Prefix.pch; sourceTree = "<group>"; };
-		7F35FF3C07F9ACD90056051D /* QSCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSCore.framework; sourceTree = QSFrameworks; };
 		7F35FF3D07F9ACD90056051D /* QSEffects.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSEffects.framework; sourceTree = QSFrameworks; };
-		7F35FF3E07F9ACD90056051D /* QSFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSFoundation.framework; sourceTree = QSFrameworks; };
 		7F35FF3F07F9ACD90056051D /* QSInterface.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSInterface.framework; sourceTree = QSFrameworks; };
-		7FFA8E9C0816CCCA00A858CD /* QSEffects.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSEffects.framework; sourceTree = QSFrameworks; };
-		7FFA8E9D0816CCCA00A858CD /* QSInterface.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSInterface.framework; sourceTree = QSFrameworks; };
 		8D1AC9730486D14A00FE50C9 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D1AC9740486D14A00FE50C9 /* QSOpera.qsplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QSOpera.qsplugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBF5817A0B1D9D84003CFF55 /* QSOperaAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSOperaAction.h; sourceTree = "<group>"; };
 		BBF5817B0B1D9D84003CFF55 /* QSOperaAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSOperaAction.m; sourceTree = "<group>"; };
 		BBF581820B1D9DC3003CFF55 /* QSOperaSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSOperaSource.h; sourceTree = "<group>"; };
 		BBF581830B1D9DC3003CFF55 /* QSOperaSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSOperaSource.m; sourceTree = "<group>"; };
+		CDF267E415907557007909C0 /* QSCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDF267E515907557007909C0 /* QSEffects.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSEffects.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDF267E615907557007909C0 /* QSFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDF267E715907557007909C0 /* QSInterface.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QSInterface.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD92D38A0106425D02CA0E72 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		E1EAB045068128A200774DFF /* QSOpera.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = QSOpera.m; sourceTree = "<group>"; };
 		E1EAB047068128A800774DFF /* QSOpera.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = QSOpera.h; sourceTree = "<group>"; };
@@ -74,8 +76,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D1AC9700486D14A00FE50C9 /* Cocoa.framework in Frameworks */,
-				7F35FF4007F9ACD90056051D /* QSCore.framework in Frameworks */,
-				7F35FF4207F9ACD90056051D /* QSFoundation.framework in Frameworks */,
+				CDF267E815907557007909C0 /* QSCore.framework in Frameworks */,
+				CDF267E915907557007909C0 /* QSEffects.framework in Frameworks */,
+				CDF267EA15907557007909C0 /* QSFoundation.framework in Frameworks */,
+				CDF267EB15907557007909C0 /* QSInterface.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,11 +143,11 @@
 		2E58F364FFB232C311CA0CBA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CDF267E415907557007909C0 /* QSCore.framework */,
+				CDF267E515907557007909C0 /* QSEffects.framework */,
+				CDF267E615907557007909C0 /* QSFoundation.framework */,
+				CDF267E715907557007909C0 /* QSInterface.framework */,
 				DD92D38A0106425D02CA0E72 /* Cocoa.framework */,
-				7F35FF3C07F9ACD90056051D /* QSCore.framework */,
-				7F35FF3E07F9ACD90056051D /* QSFoundation.framework */,
-				7FFA8E9C0816CCCA00A858CD /* QSEffects.framework */,
-				7FFA8E9D0816CCCA00A858CD /* QSInterface.framework */,
 				7FC20C8107FB741700FDD3CA /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -214,6 +218,9 @@
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
 			mainGroup = 0259C574FE90428111CA0C5A /* QSOpera */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -279,14 +286,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 070990E7134C020C009A0331 /* QSPlugIn_Debug.xcconfig */;
 			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(QSFrameworks)";
-				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = QSOpera_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				OTHER_LDFLAGS = "-bundle";
 				PRODUCT_NAME = QSOpera;
@@ -299,12 +299,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 070990E8134C020C009A0331 /* QSPlugIn_Release.xcconfig */;
 			buildSettings = {
-				COPY_PHASE_STRIP = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(QSFrameworks)";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = QSOpera_Prefix.pch;
 				INFOPLIST_FILE = Info.plist;
 				OTHER_LDFLAGS = "-bundle";
 				PRODUCT_NAME = QSOpera;
@@ -317,7 +312,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 070990E7134C020C009A0331 /* QSPlugIn_Debug.xcconfig */;
 			buildSettings = {
-				MACOSX_DEPLOYMENT_TARGET = 10.5;
 			};
 			name = Debug;
 		};
@@ -325,8 +319,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 070990E8134C020C009A0331 /* QSPlugIn_Release.xcconfig */;
 			buildSettings = {
-				GCC_MODEL_TUNING = G5;
-				MACOSX_DEPLOYMENT_TARGET = 10.5;
 			};
 			name = Release;
 		};

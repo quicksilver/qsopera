@@ -21,7 +21,6 @@
 */
 
 #import "QSOperaAction.h"
-#import <QSCore/QSObject_StringHandling.h>
 
 @implementation QSOperaAction
 

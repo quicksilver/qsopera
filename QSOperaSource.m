@@ -23,9 +23,6 @@
 #import "QSOperaSource.h"
 #import "OperaBookmark.h"
 #import "QSOpera.h"
-#import <QSCore/QSObject.h>
-#import <QSCore/QSObject_URLHandling.h>
-
 
 @implementation QSOperaSource
 
@@ -41,7 +38,7 @@
 - (NSArray *) objectsForEntry:(NSDictionary *)theEntry{
 	NSArray *oSearchItems = [OperaBookmark loadSearches];
 	NSArray *oBookmarkItems = [OperaBookmark loadBookmarks];
-	int iCount = (oSearchItems != nil ? [oSearchItems count] : 0) + (oBookmarkItems != nil ? [oBookmarkItems count] : 0);
+	NSUInteger iCount = (oSearchItems != nil ? [oSearchItems count] : 0) + (oBookmarkItems != nil ? [oBookmarkItems count] : 0);
     NSMutableArray *objects=[NSMutableArray arrayWithCapacity:iCount];
 	if (oBookmarkItems != nil)
 		[QSOpera mapObjectsFrom:oBookmarkItems into:objects];
